@@ -385,7 +385,7 @@ address {
     display: flex;
     flex-wrap: wrap;
     margin-top: 8px;
-    gap: 16px;
+    gap: 24px;
     justify-content: center;
 }
 
@@ -410,5 +410,37 @@ address {
 }
 
 .social-links .link:hover .icon {
+    fill: #03a9f4;
+}
+
+.social-links-foot {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    gap: 16px;
+    justify-content: center;
+}
+
+.social-links-foot .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-links-foot .link:hover,
+.social-links-foot .link:focus {
+    background-color: #31d0aa;
+}
+
+.social-links-foot .icon {
+    fill: #f4f4fd;
+}
+
+.social-links-foot .link:hover .icon {
     fill: #03a9f4;
 }
