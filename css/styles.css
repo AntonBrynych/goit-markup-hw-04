@@ -54,6 +54,9 @@ address {
 
 .header {
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .navigation {
@@ -103,10 +106,28 @@ address {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.current {
+    color: #404bbf;
+    position: relative;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
 .page-nav .link:hover,
 .page-nav .link:focus,
 .page-nav .link:active {
     color: #404bbf;
+}
+
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: #404BBF;
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
 }
 
 .page-nav .contact {
@@ -121,35 +142,9 @@ address {
     color: #404bbf;
 }
 
-.current {
-    position: relative;
-    color: #404BBF;
-}
-
-.current::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    background-color: #404BBF;
-    border-radius: 2px;
-    height: 4px;
-    width: 100%;
-}
-
 .addr {
     margin-left: auto;
     font-style: normal;
-}
-
-.hero {
-    background-image: linear-gradient(to bottom,
-            rgba(46, 47, 66, 0.7),
-            rgba(46, 47, 66, 0.7)),
-            url(../images/office.jpg);
-    background-size: cover;
-    background-position: center;
-    max-width: 1440рх;
 }
 
 .section {
@@ -158,10 +153,17 @@ address {
 }
 
 .main-section {
-    background-color: #2e2f42;
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
+    max-width: 1440рх;
+    background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/office.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
 }
 
 .main-header {
@@ -186,7 +188,8 @@ address {
     text-align: center;
     min-width: 169px;
     height: 56px;
-    cursor: pointer;    
+    cursor: pointer; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover,
@@ -238,8 +241,8 @@ address {
     border-radius: 4px;
     background-color: #F4F4FD;
     justify-content: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    align-items: center;
+    height: 112px;
     margin-bottom: 8px;
 }
 
@@ -253,7 +256,9 @@ address {
     width: calc((100% - 72px) / 4);
     background-color: #ffffff;
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 2px 1px 0px #2E2F4214;    
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);        
 }
 
 .list-port {
@@ -347,8 +352,9 @@ address {
     background-color: #03a9f4;
 }
 
-.social-links .link:hover {
-    background-color: #fff;
+.social-links .link:hover,
+.social-links .link:focus {
+    background-color: #404bbf;
 }
 
 .social-links .icon {
