@@ -309,6 +309,17 @@ address {
     padding-bottom: 100px;
 }
 
+.footer-container {
+    max-width: 1158px;
+    padding: 0 15px;
+    margin-right: 120px;
+}
+
+.footerr {
+    display: flex;
+    align-items: baseline;
+}
+
 .foot-text {
     color: #f4f4fd;
     background-color: #2e2f42;
@@ -332,6 +343,15 @@ address {
 
 .foot-logo-name {
     color: #f4f4fd;   
+}
+
+.foot-bold {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
 }
 
 .social-links {
